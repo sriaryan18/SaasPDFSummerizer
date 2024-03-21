@@ -12,8 +12,10 @@
             <p>Join Millond of students, researcher and Professor to instantly answer questions using AI from a PDF</p>
            </div>
            <div class="w-[70%]">
-            <FileUpload choose-label="Browse"/>
-           
+              <BaseUpload/>
+           </div>
+           <div>
+            <Image src="/assets/chat_gpt-sixteen_nine.jpg"/>
            </div>
         </div>
     </div>

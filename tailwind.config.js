@@ -2,7 +2,6 @@ import tree from './presets/lara/tree';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  important:true,
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -12,6 +11,7 @@ export default {
     "./error.vue",
     "presets/**/*.{js,vue,ts}"
   ],
+  darkMode:false,
   theme: {
     extend: {
       colors:{
