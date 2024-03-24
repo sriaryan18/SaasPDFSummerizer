@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import path from 'path'
+import lara from './presets/lara'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig:{
@@ -19,12 +20,37 @@ export default defineNuxtConfig({
   },
   modules:[
     '@nuxtjs/eslint-module',
-    'nuxt-primevue'
+    'nuxt-primevue',
+    '@pinia/nuxt',
   ],
   primevue: {
     options: {
       unstyled: true,
+      pt:lara
     },
-    importPT: { from: path.resolve(__dirname, './presets/lara/') }  
-}
+    importPT: { as: 'Lara',from: path.resolve(__dirname, './presets/lara/') }  
+  },
+  pinia:{
+    storesDirs:['./stores/**']
+  },
+  components:[
+    {
+      path:'~/components/Auth',
+      prefix:'Auth'
+    },
+    '~/components'
+  ],
+  ssr:false
+  // imports: {
+  //   dirs: ['pages/auth/components']
+  // }
+  // hooks:{
+  //   "components:dirs" : (dirs) => {
+  //     dirs.push({
+  //       path:'./pages/auth',
+  //       prefix:'Auth'
+  //     })
+  //   }
+  // }
+  
 })

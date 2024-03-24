@@ -9,9 +9,9 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./app.vue",
     "./error.vue",
-    "presets/**/*.{js,vue,ts}"
+    "./presets/**/*.{js,vue,ts}"
   ],
-  darkMode:false,
+  darkMode:'class',
   theme: {
     extend: {
       colors:{

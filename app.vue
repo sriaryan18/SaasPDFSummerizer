@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-r grad from-white to-green-100 h-screen" :class="{dark:false}">
+  <div class="bg-gradient-to-r grad from-white to-green-100 h-screen" >
     <NuxtPage />
   </div>
 </template>
@@ -11,6 +11,6 @@ import 'primeicons/primeicons.css'
 </script>
 
 <style>
-  @import url('./assets/css/main.css');
+  /* @import url('./assets/css/main.css'); */
   
 </style>
