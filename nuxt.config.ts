@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       jwt:{
         jwrSecret:'JWTSCRENT@1233456.@#$%^&',
         jwtExpireTime:3600
-      }
+      },
   },
   css: ['~/assets/css/main.css'],
   postcss: {
@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     },
     '~/components'
   ],
-  ssr:false
+  ssr:false,
   // imports: {
   //   dirs: ['pages/auth/components']
   // }

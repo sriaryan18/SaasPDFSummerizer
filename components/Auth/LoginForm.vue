@@ -11,6 +11,7 @@
     <Button
       label="Login"
       class="w-[35%]"
+      @click="handleSignUp"
     />
   </div>
 </template>
@@ -28,6 +29,16 @@ interface LoginFormProps{
 }
 
 const props = defineProps<LoginFormProps>();
+
+
+async function handleSignUp(e:Event){
+  const {response:{data}} = await useUserAuth({
+    "username":"Aryantest",
+    "password":"test"
+},'signIn');
+console.log('I am data',data.value?.username);
+
+}
 
 
 </script>

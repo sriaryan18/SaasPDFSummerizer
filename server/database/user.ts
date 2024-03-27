@@ -19,7 +19,7 @@ export const createNewUser = async ({username, password, email, name, mobile} : 
 
 }
 
-export const checkUserExists = async (query:string) : Promise<checkUserExistsResponse | null>=>{
+export const checkUserExists = async (query:string) : Promise<checkUserExistsResponse | null>=>{   
    const response = await prisma.user.findFirst({
       where:{
          OR:[

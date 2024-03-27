@@ -1,5 +1,5 @@
-import {createNewUser} from '../database/user'
-import { generateJWT } from '../utils/jwt';
+import {createNewUser} from '../../database/user'
+import { generateJWT } from '../../utils/jwt';
 
 export default defineEventHandler(async (event) => {
    const body = await readBody(event);

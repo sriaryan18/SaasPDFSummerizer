@@ -1,13 +1,16 @@
-import { checkUserExists } from "../database/user";
+import { checkUserExists } from "../../database/user";
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async (event) => {  
   try{
     const body = await readBody(event);
+    console.log('I am bidy',body);
+    
     const {username,password} = body;    
     const userData = await checkUserExists(username);
+    
     if(!userData){
       sendError(event,createError({
-        message:'User does not exists',
+        statusMessage:'User does not exists',
         statusCode:404
       }));
     }else if(userData){
